@@ -1,0 +1,24 @@
+{% extends 'improve_form/base_form.html' %}
+
+{% block improve_form %}
+    <h2>{{ form_heading|default:"Register today!" }}</h2>
+    <p>{{ form_preamble }}</p>
+    <form method="post">
+      {% csrf_token %}
+      {% if form_as_type == 'table' %}
+      <table>
+        {{ form.as_table }}
+      </table>
+      {% elif form_as_type == 'ul' %}
+      <ul>
+        {{ form.as_ul}}
+      </ul>
+      {% elif form_as_type == 'fieldset' %}
+      {{ form.as_fieldset }}
+      {% else %}
+      {{ form.as_p }}
+      {% endif %}
+      <button type="submit">{{ form_button_text|default:"Submit" }}</button>
+    </form>
+
+{% endblock %}
