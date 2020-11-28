@@ -1,17 +1,18 @@
 from django.test import TestCase, override_settings  # , TransactionTestCase, Client, RequestFactory,
 from unittest import skip
 from django.core.exceptions import ImproperlyConfigured  # , ValidationError, NON_FIELD_ERRORS  # , ObjectDoesNotExist
-from .helper_admin import AdminSetupTests  # , AdminModelManagement
+# from .helper_admin import AdminSetupTests  # , AdminModelManagement
 from .helper_views import BaseRegisterTests  # , USER_DEFAULTS, MimicAsView,
-from .helper_general import ProfileModel, FailUserModel, HalfFailUserModel,MockModel
+from .helper_general import ProfileModel, FailUserModel, HalfFailUserModel, MockModel
 from ..views import RegisterSimpleFlowView, RegisterActivateFlowView, ModifyUser
 from ..views import RegisterModelSimpleFlowView, RegisterModelActivateFlowView
 from ..forms import RegisterUserForm, RegisterChangeForm, RegisterModelForm
 from ..forms import make_names
 
 
-class AdminGeneralModelsTests(AdminSetupTests, TestCase):
-    pass
+# @skip("Not Implemented")
+# class AdminGeneralModelsTests(AdminSetupTests, TestCase):
+#     pass
 
 
 @override_settings(ROOT_URLCONF='django_improve_form.tests.urls_simple')
