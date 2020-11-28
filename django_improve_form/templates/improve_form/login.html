@@ -1,0 +1,10 @@
+{% extends 'improve_form/base_form.html' %}
+
+{% block improve_form %}
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+    </form>
+
+{% endblock %}

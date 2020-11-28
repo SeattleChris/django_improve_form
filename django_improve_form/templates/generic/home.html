@@ -1,0 +1,54 @@
+{% extends "generic/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<title>Home Site</title>
+{% endblock head %}
+
+
+{% block content %}
+
+<section>
+  <h1><a href="{% url 'home' %}" title="Home Site">Home Topic</a></h1>
+  <article>
+    <h2>First Article in First Section</h2>
+    <p>
+      Home page content.
+    </p>
+  </article>
+  <article>
+    <h2>
+      Secondary Content
+    </h2>
+    <p>
+      Some more content.
+    </p>
+  </article>
+</section>
+
+<section>
+  <h2>Other Section h2</h2>
+  <article>
+    <h2>Article in Other Section</h2>
+    {% if all_urls %}
+    <ul>
+      {% for a, b in all_urls %}
+      <li><a href="{% url b %}">{{ a }}</a></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>
+      Content of first article in other section.
+    </p>
+    {% endif %}
+  </article>
+  <article>
+    <h2>Another article in Other Section</h2>
+    <p>
+      This has content as well.
+    </p>
+  </article>
+</section>
+
+{% endblock content %}

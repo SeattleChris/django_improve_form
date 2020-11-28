@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/ico" href="{% static 'assets/favicon.ico' %}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Diplomata|Open+Sans&display=swap" />
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  {% block super_head %}
+
+  {% if css_sheets %}
+  {% for sheet in css_sheets %}
+  <link rel="stylesheet" href="{% static sheet %}" />
+  {% endfor %}
+  {% endif %}
+
+  {% block head %}
+  <title>{{ page_title|default:"DEFAULT SITE TITLE" }}</title>
+  {% endblock head %}
+
+  {% endblock super_head %}
+</head>
+<body>
+<header>
+  <h1>
+    <a href="{% url 'home' %}" title="Home Page">
+      <img src="{% static 'assets/logo.svg' %}" alt="Company Name Logo" />
+      Home Page
+    </a>
+  </h1>
+  <nav role="navigation">
+    <ul class="site-nav">
+      <li><a href="{% url 'named_path' %}" title="SEO and User helpful title">Named Path</a></li>
+      <li><a href="{% url 'profile_page' %}" title="This is a profile page">Profile Placeholder</a></li>
+      <li><a href="#">Info</a></li>
+    </ul>
+  </nav>
+</header>
+
+{% block super_content %}
+<main>
+{% block content %}
+<section class="column_1">
+{% block column_1 %}
+
+  <h1><a href="{% url 'home' %}" title="Home Site">Home Topic</a></h1>
+  <article>
+    <h2>{{ article_1__title|default:"First Article in First Section" }}</h2>
+    <p>
+      {% lorem %}
+      <img src="https://placehold.it/120x60/000000/FFFFFF" alt="Placeholder image" />
+    </p>
+  </article>
+  <article>
+    <h2>
+      Secondary Content
+    </h2>
+    {% lorem 2 p %}
+  </article>
+
+{% endblock column_1 %}
+</section>
+<section class="column_2">
+{% block column_2 %}
+
+  <h2>Other Section h2</h2>
+  <article>
+    <h2>Article in Other Section</h2>
+    {% lorem 2 p %}
+  </article>
+  <article>
+    <h2>Another article in Other Section</h2>
+    <p>
+      {% lorem %}
+    </p>
+  </article>
+
+{% endblock column_2 %}
+</section>
+{% endblock content %}
+</main>
+{% endblock super_content %}
+<footer>
+{% block footer %}
+  <a href="{% url 'home' %}" title="Home Page">
+    <img src="{% static 'assets/logo.svg' %}" alt="Company Name Logo" />
+  </a>
+  <ul>
+    <li><a href="{% url 'home' %}" title="Home Site">Home</a></li>
+    <li><a href="{% url 'named_path' %}" title="SEO and User helpful title">Named Path</a></li>
+  </ul>
+  <p>2020 &copy; {{ company_name|default:"Company Name"}}</p>
+{% endblock footer %}
+</footer>
+{% block super_end %}
+<!-- <script src="script.js"></script> -->
+{% endblock super_end %}
+</body>
+</html>

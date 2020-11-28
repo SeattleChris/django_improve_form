@@ -1,0 +1,11 @@
+{% extends 'improve_form/base_form.html' %}
+
+{% block improve_form %}
+    <h2>Update Your Account Information</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Update</button>
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'generic/base.html' %}
+
+{% if improve_form_title %}
+{% block head %}
+<title>{{ improve_form_title }}</title>
+{% endblock head %}
+{% endif %}
+
+{% block content %}
+<section>
+  <article class={{ improve_form_container_class|default:'form-container' }}>
+    {% block improve_form %}
+    {% endblock improve_form %}
+  </article>
+</section>
+<section>
+
+</section>
+{% endblock content %}
