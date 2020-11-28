@@ -17,11 +17,30 @@ def boot_django():
             }
         },
         INSTALLED_APPS=(
-            # 'django.contrib.admin',
+            'django.contrib.contenttypes',
             'django.contrib.auth',
-            'django_registration',
+            # 'django_registration',
             "django_improve_form",
         ),
+        # ROOT_URLCONF='django_improve_form.urls_activation',
+        ROOT_URLCONF='django_improve_form.tests.urls_simple',
+        TEMPLATES=[
+            {
+                'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                'DIRS': [os.path.join(BASE_DIR, 'templates')],
+                # 'DIRS': [],
+                'APP_DIRS': True,
+                # 'OPTIONS': {
+                #     'context_processors': [
+                #         'django.template.context_processors.debug',
+                #         'django.template.context_processors.request',
+                #         'django.contrib.auth.context_processors.auth',
+                #         'django.contrib.messages.context_processors.messages',
+                #     ],
+                # },
+            },
+        ],
+
         TIME_ZONE="UTC",
         USE_TZ=True,
     )
