@@ -17,6 +17,9 @@ def boot_django():
             }
         },
         INSTALLED_APPS=(
+            # 'django.contrib.admin',
+            'django.contrib.auth',
+            'django_registration',
             "django_improve_form",
         ),
         TIME_ZONE="UTC",
