@@ -49,7 +49,7 @@ Conditional & Computed Input Fields:
 
 Computed Username:
 - Can default to using an email address (or other method).
-- Can have a backup to `firstname_lastname` if default does not work.
+- Can have a backup to *firstname_lastname* if default does not work.
 - Any other computed default, and any other backup computed technique, can defined.
 - Optionally can compute a username without any additional user feedback
 - Optionally can have the user always confirm the computed value.
@@ -86,7 +86,7 @@ This app can be installed and used in your django project by:
     $ pip install django_improve_form
 
 
-Edit your `settings.py` file to include `'django_improve_form'` in the `INSTALLED_APPS`
+Edit your *settings.py* file to include *'django_improve_form'* in the *INSTALLED_APPS*
 listing.
 
 .. code-block:: python
@@ -98,7 +98,7 @@ listing.
     ]
 
 
-Edit your project `urls.py` file to import the URLs:
+Edit your project *urls.py* file to import the URLs:
 
 
 .. code-block:: python
@@ -121,12 +121,12 @@ Finally, add the models to your database:
 The "project" Branch
 --------------------
 
-The `main branch <https://github.com/seattlechris/django_improve_form/tree/main>`_ contains the final code.
+The main branch (https://github.com/seattlechris/django_improve_form/tree/main) contains the final code.
 
 
 Docs & Source
 -------------
 
-* Article: https://realpython.com/installable-django-app/
-* Source: https://github.com/realpython/django_improve_form
-* PyPI: https://pypi.org/project/django_improve_form/
+* Article: (https://realpython.com/installable-django-app/)
+* Source: (https://github.com/realpython/django_improve_form)
+* PyPI: (https://pypi.org/project/django_improve_form/)
