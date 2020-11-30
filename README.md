@@ -1,9 +1,9 @@
 # django_improve_form
 
-**version: v0.1.0**
-**author: Chris L Chapman**
-**License: MIT**
-**[Package Download](https://pypi.org/project/django-improve-form/)**
+**Version: v0.1.0**,
+**Author: Chris L Chapman**,
+**License: MIT**,
+**[Package Download](https://pypi.org/project/django-improve-form/)**,
 **[Source Code](https://github.com/seattlechris/django_improve_form)**
 
 Forms with improved accessability, multiple inputs on a line, conditional inputs, and other features.
@@ -116,6 +116,6 @@ Edit your project *urls.py* file to import the URLs:
 
 ## Requires
 
-Python: 3.6+ (tested in 3.6 and 3.7)
-Django: 2.2+ (tested in 2.2, 3.0, 3.1)
-django-registration: recommend latest
+- Python: 3.6+ (tested in 3.6 and 3.7)
+- Django: 2.2+ (tested in 2.2, 3.0, 3.1)
+- django-registration: recommend latest
