@@ -127,6 +127,6 @@ The main branch (https://github.com/seattlechris/django_improve_form/tree/main) 
 Docs & Source
 -------------
 
-* Article: (https://realpython.com/installable-django-app/)
-* Source: (https://github.com/realpython/django_improve_form)
-* PyPI: (https://pypi.org/project/django_improve_form/)
+* Article:
+* Source: https://github.com/SeattleChris/django_improve_form
+* PyPI: https://pypi.org/project/django_improve_form/
