@@ -27,8 +27,8 @@ Multiple inputs on a line & Fieldsets:
 - Different form sections can be defined, giving additional section styling options.
 - Can use HTML fieldsets to aid in layout, accessability, and general clarity.
 - Can be combined with the Computed features, allowing some fields and some sections only under certain conditions.
-- The typical interface of of using 'as_table', 'as_ul', or 'as_p' is still available, using the new features.
-- Additional 'as_fieldset' display format similar to typical 'as_table', 'as_p', 'as_ul' formats.
+- The typical interface of of using **as_table**, **as_ul**, or **as_p** is still available, using the new features.
+- Additional **as_fieldset** display format similar to typical **as_table**, **as_p**, **as_ul** formats.
 - Developers can design their own formatting, either connecting to the new or old style of _html_output structure.
 - The old _html_output method is available for use, though some of these features depend on a new version.
 
@@ -63,7 +63,7 @@ Computed Username:
 
 User Authorization Process:
 
-- Integrates 'Django-registration' package with additional features.
+- Integrates **django-registration** package with additional features.
 - Can have a simple flow process of creating new users.
 - Can have an authorization process, requiring an emailed authorization link, before account creation.
 
@@ -86,16 +86,14 @@ Interoperability:
 Installable App
 ---------------------
 
-This app models ...
-
 This app can be installed and used in your django project by:
 
 .. code-block:: bash
 
-    $ pip install django_improve_form
+    $ pip install django-improve-form
 
 
-Edit your *settings.py* file to include *'django_improve_form'* in the *INSTALLED_APPS*
+Edit your *settings.py* file to include **django_improve_form** in the **INSTALLED_APPS**
 listing.
 
 .. code-block:: python
@@ -115,16 +113,8 @@ Edit your project *urls.py* file to import the URLs:
     url_patterns = [
         ...
 
-        path('django_improve_form/', include('django_improve_form.urls')),
+        path('register', include('django_improve_form.urls')),
     ]
-
-
-Finally, add the models to your database:
-
-
-.. code-block:: bash
-
-    $ ./manage.py makemigrations django_improve_form
 
 
 The "project" Branch
@@ -136,6 +126,5 @@ The main branch (https://github.com/seattlechris/django_improve_form/tree/main) 
 Docs & Source
 ---------------------
 
-* Article:
 * Source: https://github.com/SeattleChris/django_improve_form
-* PyPI: https://pypi.org/project/django_improve_form/
+* PyPI: https://pypi.org/project/django-improve-form/
