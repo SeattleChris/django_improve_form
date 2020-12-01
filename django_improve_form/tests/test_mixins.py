@@ -6,7 +6,7 @@ from django.forms.utils import pretty_name, ErrorDict  # , ErrorList
 from django.forms import (CharField, BooleanField, EmailField, HiddenInput, MultipleHiddenInput,
                           RadioSelect, CheckboxSelectMultiple, CheckboxInput, Textarea, Select, SelectMultiple)
 from django.contrib.admin.utils import flatten
-from django.contrib.auth import get_user_model  # , views
+from django.contrib.auth import get_user_model, password_validation  # , views
 from django.urls import reverse  # , reverse_lazy
 from django.utils.datastructures import MultiValueDict
 from django.utils.html import format_html  # conditional_escape,
@@ -27,7 +27,9 @@ FOCUS = 'autofocus '  # TODO: Deal with HTML output for a field (besides usernam
 REQUIRED = 'required '
 MULTIPLE = ' multiple'
 DEFAULT_RE = {ea: f"%({ea})s" for ea in ['start_tag', 'label_end', 'input_end', 'end_tag', 'name', 'pretty', 'attrs']}
-DEFAULT_RE.update(input_type='text', last='', required='', error='')
+pass1_help = password_validation.password_validators_help_text_html()
+pass1_help = '%(input_end)s<span class="helptext">' + pass1_help + '</span>' if pass1_help else ''
+DEFAULT_RE.update(input_type='text', last='', required='', error='', pass1_help=pass1_help)
 USERNAME_TXT = '' + \
     '%(start_tag)s<label for="id_username">Username:</label>%(label_end)s<input type="text" name="username" ' + \
     '%(name_length)s%(user_attrs)s%(focus)srequired id="id_username">' + \
@@ -36,10 +38,7 @@ USERNAME_TXT = '' + \
 USERNAME_TXT = USERNAME_TXT % dict(name_length=NAME_LENGTH, user_attrs=USER_ATTRS, focus=FOCUS, **DEFAULT_RE)
 PASSWORD1_TXT = '' + \
     '%(start_tag)s<label for="id_password1">Password:</label>%(label_end)s<input type="password" name="password1" ' + \
-    'autocomplete="new-password" required id="id_password1">%(input_end)s<span class="helptext"><ul><li>Your pass' + \
-    'word can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 ' + \
-    'characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely ' + \
-    'numeric.</li></ul></span>%(end_tag)s\n'
+    'autocomplete="new-password" required id="id_password1">%(pass1_help)s%(end_tag)s\n'
 PASSWORD2_TXT = '' + \
     '%(start_tag)s<label for="id_password2">Password confirmation:</label>%(label_end)s<input type="password" ' + \
     'name="password2" autocomplete="new-password" required id="id_password2">%(input_end)s<span class="helptext">' + \
