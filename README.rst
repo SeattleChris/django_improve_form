@@ -10,7 +10,7 @@ computed values, conditional formatting, and adaptive content and structure.
 Features
 ---------------------
 
-Accessability & Usability:
+**Accessability & Usability**:
 
 - Autocomplete: Using the HTML autocomplete attribute to hint the user's browser for the appropriate autocomplete value.
 - Autocomplete: Can be configured to assign as appropriate to your field names, with defaults to typical field names.
@@ -19,7 +19,7 @@ Accessability & Usability:
 - Using Aria to associate help text to the appropriate input field.
 - All input fields using best practices for labels and accessability.
 
-Multiple inputs on a line & Fieldsets:
+**Multiple inputs on a line & Fieldsets**:
 
 - Similar syntax to how Django's Admin can define multiple inputs on a row.
 - Field labels and input controls can be aligned across different rows.
@@ -32,7 +32,7 @@ Multiple inputs on a line & Fieldsets:
 - Developers can design their own formatting, either connecting to the new or old style of _html_output structure.
 - The old _html_output method is available for use, though some of these features depend on a new version.
 
-Overrides & Formatting:
+**Overrides & Formatting**:
 
 - If a field input has a max size, the visual form input field is (optionally) sized accordingly.
 - Can define default field sizes, and conditional exceptions, in a centralized setting.
@@ -40,7 +40,7 @@ Overrides & Formatting:
 - Address: Can have local vs general field labels. Such as using State vs Providence or Zip vs Postal code.
 - Address: Can avoid asking for Country input unless they've indicated a foreign address.
 
-Conditional & Computed Input Fields:
+**Conditional & Computed Input Fields**:
 
 - A very adaptive and wide range of ways to configure computed values can be defined.
 - A typically computed field can be set with conditions to trigger a user's manual override or confirmation.
@@ -52,7 +52,7 @@ Conditional & Computed Input Fields:
 - Can have a final backup of user override if all computed strategy conditions fail.
 - The various ways of computing a value can be combined as desired.
 
-Computed Username:
+**Computed Username**:
 
 - Can default to using an email address (or other method).
 - Can have a backup to *firstname_lastname* if default does not work.
@@ -61,13 +61,13 @@ Computed Username:
 - Optionally can have the user always confirm the computed value.
 - Optionally can have a user confirmation or input an override for only defined conditions.
 
-User Authorization Process:
+**User Authorization Process**:
 
 - Integrates **django-registration** package with additional features.
 - Can have a simple flow process of creating new users.
 - Can have an authorization process, requiring an emailed authorization link, before account creation.
 
-Auto-Focus Input Field:
+**Auto-Focus Input Field**:
 
 - Can remove Django's default to autofocus the username input field.
 - A specific field can be given the HTML autofocus attribute.
@@ -76,15 +76,15 @@ Auto-Focus Input Field:
 - Typically gives autofocus to the first input field if focus is not otherwise determined.
 - Can remove autofocus from all fields if autofocus is not desired.
 
-Interoperability:
+**Interoperability**:
 
 - All of the above feature sets work with Django's existing structure for forms.
 - Each of these feature sets are designed as a MixIns, allowing versatile usage and extension.
 - These feature set MixIns can be combined or not included as desired.
 - Some MixIn combinations are pre-defined for even more ease of development.
 
-Installable App
----------------------
+Installing the App in a Django Project
+---------------------------------------
 
 This app can be installed and used in your django project by:
 
