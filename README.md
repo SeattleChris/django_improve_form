@@ -1,6 +1,6 @@
 # django_improve_form
 
-**Version: v0.1.0**,
+**Version: v0.2.0**,
 **Author: Chris L Chapman**,
 **License: MIT**,
 **[Package Download](https://pypi.org/project/django-improve-form/)**,
